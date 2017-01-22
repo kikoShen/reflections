@@ -1,0 +1,10 @@
+ls -a —>list all files in this directory
+
+* git init （git 初始化）
+* git add （git 添加）
+* git status （git 状态）
+* staging area （暂存区）
+* working directory （工作目录）
+
+暂存区与工作目录和版本库有何不同？有何价值？
+git commit -m "Commit message"
