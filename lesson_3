@@ -1,1 +1,38 @@
 when would you create your remote repository rather than keep all your work in local?
+
+GitHub
+git push  origin master推送 
+git pull  拉取
+remote 远程
+
+为何你希望始终手动地拉取更改，而不是让 Git 自动与你的远程版本库保持同步？
+
+fork: allow you to make a copy of somebody else’s repository directly on the GitHub servers without pulling down the code to your local machine first.
+
+当本地clone了云端代码，github会自动为你创建一个origin远程代码库
+
+说明Fork、克隆和分支之间的不同。何时使用某种功能而不是另一种？
+
+协作引发冲突 conflicting collaboration
+合并本地代码与远程代码库
+origin/master 是你从github pull来时，获得的当前本地副本 与远程版本位于相同位置
+git fetch 更新远程分支的本地副本 实际的本地版本保持不动
+git pull = git fetch+git merge 拉取远程master更新本地副本（origin／master）在合并origin／master和master分支
+
+实践：
+git fetch origin 
+更新本地副本
+
+
+git log origin/master 检查本地副本(源／主分支)
+git diff origin/master master  检查本地副本的修改情况
+
+fast-forward merges 快速合并
+适用于两个具有祖先／子孙关系的commit 操作：将祖先commit移到子孙commit上
+
+pull requests 使他人可以查看我的更改并评论
+github要求在本地解决冲突 并pull
+
+合作过程
+git pull origin master 更新本地代码
+出现冲突后 解决后需要commit 最好log查看一下
