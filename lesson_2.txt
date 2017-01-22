@@ -16,3 +16,43 @@ git commit
 git diff 不带id 即在对比working directory 和staging area 两者的差别
 git diff —staged 比较staging area 和repository
 git reset —hard drop changes from working directory/staging area(be careful!!!! to this one .if you run this command, you can’t get those changes back.)
+
+如何使用暂存区确保为每项逻辑更改进行一次提交？
+Branches
+keep linear fix bugs, add new features update documentation
+detached message is kind of ,git just warning you that you’re not name the branch
+当前最后一个commit 称为 分支的顶点 （tip of the branch）
+单个commit上可能会出现多个分支标记（branch labels）
+但更新commit只会更新你检出的分支，对其他没有影响（leave any others alone）
+
+git branch  :shows me my current branches.
+*:is currently branch checked out.
+
+在哪些情况下，分支可以帮助你有序地组织历史记录？分支将如何提供帮助？
+
+remote branch （远程分支）:other people’s branch
+
+every commit knows it’s parent, that was checked out when it was made.
+commit log的工作原理：
+log  以当前branch或者任何指定分支的最新commit为起点，追踪到没有父commit的commit
+
+reachability 可达性
+head ：current commit not branch
+git checkout -b new_branch_name :branch+checkout（if detached message appears ，you can use it）
+
+
+merge(合并)—>combine
+if you fork the master, the master was grown.
+
+git 保存了两个fork前的版本，called original
+
+删除分支 意味着删除标签 但不删除commit 如果没有分支能够访问某个提交，删除分支将有效放弃其提交
+
+Git 的自动合并与始终手动进行合并各有何优缺点？
+
+解决冲突的方法 进入提示的文件 search <<<<<标注了差异部分代码 你可以找到你更改的部分 和其他人的更改 并进行解决
+
+
+
+
+
