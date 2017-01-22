@@ -8,3 +8,11 @@ ls -a —>list all files in this directory
 
 暂存区与工作目录和版本库有何不同？有何价值？
 git commit -m "Commit message"
+
+git add
+git status 
+git commit
+
+git diff 不带id 即在对比working directory 和staging area 两者的差别
+git diff —staged 比较staging area 和repository
+git reset —hard drop changes from working directory/staging area(be careful!!!! to this one .if you run this command, you can’t get those changes back.)
